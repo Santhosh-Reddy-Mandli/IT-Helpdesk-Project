@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}IT Helpdesk{% endblock %}</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-<header class="topbar">
-  <button class="menu-btn" id="menuBtn">&#9776;</button>
-  <h1>
-    <img class="brand-logo"
-        src="{{ url_for('static', filename='images/helpdesk-logo.png.jpg') }}"
-         alt="">
-    IT Helpdesk
-  </h1>
-</header>
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <h1>
+      <img class="brand-logo" src="{{ url_for('static', filename='images/helpdesk-logo.png.jpg') }}" alt="IT Helpdesk logo">
+      <span>IT Helpdesk</span>
+    </h1>
+  </header>
   <div class="layout">
     <nav class="sidebar" id="sidebar">
       <a href="{{ url_for('dashboard') }}" class="{{ 'active' if request.endpoint=='dashboard' }}">&#128202; Dashboard</a>
@@ -31,6 +29,6 @@
       {% block content %}{% endblock %}
     </main>
   </div>
-  <script src="/static/script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
