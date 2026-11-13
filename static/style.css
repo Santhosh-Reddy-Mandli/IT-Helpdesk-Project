@@ -67,6 +67,14 @@ tr:hover td{background:#f8fafc}
 .form-error{color:#991b1b;margin-top:10px}
 .empty{text-align:center;color:#64748b}
 @media(max-width:768px){
+  /* Full-screen image */
+.full-screen-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    display: block;
+    background: #f1f4f8;
+}
   .menu-btn{display:block}
   .sidebar{position:fixed;top:92px;left:-240px;height:100%;transition:left .2s;z-index:10}
   .sidebar.open{left:0}
